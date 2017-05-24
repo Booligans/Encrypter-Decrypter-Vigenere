@@ -12,7 +12,7 @@ const std::string KEY = "abc";
 
 void EncryptFile(std::string const& f);
 //
-void NewValues(std::vector <char> & u, std::vector <int> const& v);
+void NewEncryptedValues(std::vector <char> & u, std::vector <int> const& v);
 //
 void ShowNewCode(std::vector <char> const& u);
 //
@@ -52,13 +52,13 @@ void EncryptFile(std::string const& f) {
 			file >> aux;
 			++i;
 		}
-		NewValues(u, v);
+		NewEncryptedValues(u, v);
 		ShowNewCode(u);
 		file.close();
 	}
 }
 
-void NewValues(std::vector <char> & u, std::vector <int> const& v) {
+void NewEncryptedValues(std::vector <char> & u, std::vector <int> const& v) {
 	int newCode;
 	for (int i = 0; i < v.size(); ++i)
 	{
